@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>我的虚拟旅行地图</title>
+    <style>
+        body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; background-color: #f0f2f5; }
+        .map-container { width: 600px; height: 400px; border: 2px solid #333; background: white; position: relative; margin-top: 20px; border-radius: 8px; overflow: hidden; }
+        .path { position: absolute; border-top: 4px dashed #ff4757; width: 400px; top: 200px; left: 100px; transform: rotate(-20deg); }
+        .point { position: absolute; width: 20px; height: 20px; background: #1e90ff; border-radius: 50%; display: flex; justify-content: center; }
+        .point::after { content: attr(data-label); position: absolute; top: 25px; white-space: nowrap; font-size: 14px; font-weight: bold; }
+        .start { top: 220px; left: 80px; background: #2ed573; }
+        .end { top: 70px; left: 480px; background: #ff4757; }
+        h1 { color: #2f3542; }
+    </style>
+</head>
+<body>
+    <h1>我的 2026 虚拟旅行路线</h1>
+    <p>从起点到终点的奇幻之旅</p>
+    
+    <div class="map-container">
+        <div class="path"></div>
+        <div class="point start" data-label="起点：家里"></div>
+        <div class="point end" data-label="终点：火星"></div>
+    </div>
+
+    <script>
+        console.log("地图加载成功！准备出发！");
+    </script>
+</body>
+</html>
